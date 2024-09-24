@@ -16,5 +16,4 @@ public class Actividad_inicial {
         int resultado = num1 + num2;
         System.out.println("El resultado de la suma es: " + resultado);
     }
-
 }
