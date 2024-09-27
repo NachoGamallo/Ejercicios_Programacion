@@ -1,7 +1,7 @@
 package org.example;
 import java.util.Scanner;
 
-public class Actividad_inicial {
+public class Actividad_inicial{
     public  void Actividad(){
         System.out.println("¿Como te llamas?");
         Scanner entrada = new Scanner(System.in);
