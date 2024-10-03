@@ -24,10 +24,10 @@ public class Main {
         Operadores.relation();
         Operadores.logical();*/
 
-        Practica3 practica3 = new Practica3();
-        practica3.ej3();
+        /*Practica3 practica3 = new Practica3();
+        practica3.ej3()*/;
 
-        /*Practica4 practica4 = new Practica4();
-        practica4.practice_4();*/
+        Practica4 practica4 = new Practica4();
+        practica4.practice_4();
     }
 }

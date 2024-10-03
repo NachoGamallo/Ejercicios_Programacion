@@ -43,9 +43,9 @@ public class Practica4 {
         System.out.println("  " + num);
         System.out.println("x " + num2);
         System.out.println("--------");
-        System.out.println("  " + num_1);
+        System.out.println("  " + num_3);
         System.out.println(" " + num_2 + "x");
-        System.out.println(" "+ num_3 + "xx");
+        System.out.println(" "+ num_1 + "xx");
         System.out.println("--------");
         System.out.println(" " + result);
 
