@@ -25,9 +25,19 @@ public class Main {
         Operadores.logical();*/
 
         /*Practica3 practica3 = new Practica3();
-        practica3.ej3()*/;
+        practica3.ej3();*/
 
-        Practica4 practica4 = new Practica4();
-        practica4.practice_4();
+        /*Practica4 practica4 = new Practica4();
+        practica4.practice_4();*/
+
+        //T2Exercices T2Exercices = new T2Exercices();
+        //T2Exercices.T2ex1();
+        //T2Exercices.T2ex2();
+        //T2Exercices.T2ex3();
+        //T2Exercices.T2ex4();
+        //T2Exercices.T2ex5();
+
+        Practica1_T2 practica1T2 = new Practica1_T2();
+        practica1T2.P1_T2();
     }
 }
