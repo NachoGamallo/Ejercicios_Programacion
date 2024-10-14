@@ -38,6 +38,7 @@ public class Actividad1_T2 {
 
             if (age<0){
                 System.out.println("La edad introducida no es valida");
+                error = true;
             }else {
                 born_year = actual_year - age;
             }
