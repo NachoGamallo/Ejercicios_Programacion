@@ -34,6 +34,7 @@ public class Actividad1_T2 {
                 age = entry.nextInt();
             }else{
                 System.out.println("No es correcto");
+                error = true;
             }
 
             if (age<0){
