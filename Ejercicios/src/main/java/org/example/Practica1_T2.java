@@ -8,7 +8,10 @@ public class Practica1_T2 {
         String birth_date = entry.nextLine();
         int character_num = birth_date.length();
 
-        if (character_num == 10){
+        String first_bar = birth_date.substring(2,3);
+        String second_bar = birth_date.substring(5,6);
+        
+        if (character_num == 10 || first_bar.equals("/") && second_bar.equals("/")){
                 int value = 0;
                 int day = 0;
                 int month = 0;
