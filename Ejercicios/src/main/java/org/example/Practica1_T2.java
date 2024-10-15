@@ -10,22 +10,30 @@ public class Practica1_T2 {
 
         String first_bar = birth_date.substring(2,3);
         String second_bar = birth_date.substring(5,6);
-        
-        if (character_num == 10 || first_bar.equals("/") && second_bar.equals("/")){
+
+        if (character_num == 10){
                 int value = 0;
                 int day = 0;
                 int month = 0;
                 int year = 0;
-                System.out.println(birth_date);
+                if (!first_bar.equals("/") || !second_bar.equals("/")){
+                    System.out.println("Introduce el formato de fecha correcto");
+                    value = 1;
+                }
                 try{
                     day = Integer.parseInt(birth_date.substring(0,2));
                     month = Integer.parseInt(birth_date.substring(3,5));
                     year = Integer.parseInt(birth_date.substring(6,10));
+                    if (day <= 0 || month <= 0 || year <= 0){
+                        System.out.println("Has introducido un numero negativo o 0");
+                        value = 1;
+                    }
                 }catch (NumberFormatException error){
-                    System.out.println("Has introducido letras en vez de números. ");
+                    System.out.println("Has introducido letras en vez de números o numeros negativos. ");
                     value = 1;
                 }
                 if (value == 0){
+                    System.out.println(birth_date);
                     int calc_date = (day + month + year);
 
                     System.out.println(day + "+" + month + "+" + year + " = " + calc_date);

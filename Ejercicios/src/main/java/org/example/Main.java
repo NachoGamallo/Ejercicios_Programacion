@@ -37,10 +37,10 @@ public class Main {
         //T2Exercices.T2ex4();
         //T2Exercices.T2ex5();
 
-//        Practica1_T2 practica1T2 = new Practica1_T2();
-//        practica1T2.P1_T2();
+        Practica1_T2 practica1T2 = new Practica1_T2();
+        practica1T2.P1_T2();
 
-        Actividad1_T2 Actividad1_T2 = new Actividad1_T2();
-        Actividad1_T2.A1T2();
+//        Actividad1_T2 Actividad1_T2 = new Actividad1_T2();
+//        Actividad1_T2.A1T2();
     }
 }
