@@ -14,40 +14,40 @@ public class Actividad1_T2 {
         int age = 0;
 
         boolean error = false;
-        if (elecction.equals("1")){
+        switch (elecction){
+            case "1" :
+                try {
+                    String C_born_year = entry.next();
+                    born_year = Integer.parseInt(C_born_year);
+                }catch (NumberFormatException e){
+                    System.out.println("No es un numero. ");
+                }
 
-            try {
-                String C_born_year = entry.next();
-                born_year = Integer.parseInt(C_born_year);
-            }catch (NumberFormatException e){
-                System.out.println("No es un numero. ");
-            }
+                if (born_year<1900 || born_year>actual_year){
+                    System.out.println("El año introducido no es correcto");
+                    error = true;
+                }
+                break;
+            case "2" :
+                if (entry.hasNextInt()){
+                    age = entry.nextInt();
+                }else{
+                    System.out.println("No es correcto");
+                    error = true;
+                }
 
-            if (born_year<1900 || born_year>actual_year){
-                System.out.println("El año introducido no es correcto");
+                if (age<0){
+                    System.out.println("La edad introducida no es valida");
+                    error = true;
+                }else {
+                    born_year = actual_year - age;
+                }
+                break;
+            default:
+                System.out.println("No has elejido un modo valido. ");
                 error = true;
-            }
-
-        } else if (elecction.equals("2")) {
-
-            if (entry.hasNextInt()){
-                age = entry.nextInt();
-            }else{
-                System.out.println("No es correcto");
-                error = true;
-            }
-
-            if (age<0){
-                System.out.println("La edad introducida no es valida");
-                error = true;
-            }else {
-                born_year = actual_year - age;
-            }
-
-        }else{
-            System.out.println("No has elejido un modo valido. ");
-            error = true;
         }
+
         if (!error){
 
             if (born_year>=1900 && born_year<=1927){
@@ -65,7 +65,6 @@ public class Actividad1_T2 {
             }else {
                 System.out.println("No eres de ninguna generacion");
             }
-
         }
     }
 }
