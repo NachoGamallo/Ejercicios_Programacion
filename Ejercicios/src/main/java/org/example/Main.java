@@ -40,7 +40,10 @@ public class Main {
 //        Practica1_T2 practica1T2 = new Practica1_T2();
 //        practica1T2.P1_T2();
 
-        Actividad1_T2 Actividad1_T2 = new Actividad1_T2();
-        Actividad1_T2.A1T2();
+//        Actividad1_T2 Actividad1_T2 = new Actividad1_T2();
+//        Actividad1_T2.A1T2();
+
+        Practica2_T2 P_calculator = new Practica2_T2();
+        P_calculator.calculator();
     }
 }
