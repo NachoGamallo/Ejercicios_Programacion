@@ -43,7 +43,26 @@ public class Main {
 //        Actividad1_T2 Actividad1_T2 = new Actividad1_T2();
 //        Actividad1_T2.A1T2();
 
-        Practica2_T2 P_calculator = new Practica2_T2();
-        P_calculator.calculator();
+//        Practica2_T2 P_calculator = new Practica2_T2();
+//        P_calculator.calculator();
+
+//        T2Loop_Exercices t2loopex = new T2Loop_Exercices();
+//        t2loopex.T2LEx1();
+//        t2loopex.T2LEx2();
+//        t2loopex.T2LEx3();
+//        t2loopex.T2LEx4();
+//        t2loopex.T2LEx5();
+//        t2loopex.T2LEx6();
+//        t2loopex.T2LEx7();
+//        t2loopex.T2LEx8();
+
+        Practica3_T2 practica3T2 = new Practica3_T2();
+        practica3T2.isbm_check();
+
+//        T2Random_Exercices randomExercices = new T2Random_Exercices();
+//        randomExercices.T2REx1();
+//        randomExercices.T2REx2();
+//        randomExercices.T2REx3();
+//        randomExercices.T2REx4();
     }
 }
