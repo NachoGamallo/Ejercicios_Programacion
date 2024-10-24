@@ -57,7 +57,7 @@ public class Main {
 //        t2loopex.T2LEx8();
 
         Practica3_T2 practica3T2 = new Practica3_T2();
-        practica3T2.isbm_check();
+        practica3T2.isbn_check();
 
 //        T2Random_Exercices randomExercices = new T2Random_Exercices();
 //        randomExercices.T2REx1();

@@ -1,46 +1,42 @@
 package org.example;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
+import static java.lang.System.exit;
 
 public class Practica3_T2 {
-    public void isbm_check(){
+    public void isbn_check(){
         Scanner entry = new Scanner(System.in);
-        String isbm = "";
+        String isbn;
         int operation = 0;
         int irregular_character = 0;
         int irregular_op;
         int character;
-        int number;
+        int number = 0;
         int irregular_N = 0;
 
-        try {
-            System.out.println("Introduzca un ISBN");
-            isbm = entry.next();
-        }catch (InputMismatchException error){
-            System.out.println("No has introducido el formato correcto " + error.getMessage());
-        }
+        System.out.println("Introduzca un ISBN");
+        isbn = entry.next();
 
-        if (isbm.length() == 10){
+        if (isbn.length() == 10){
 
             for (int i=1; i <= 10 ; i ++) {
 
-                if (isbm.charAt(i-1) == '?') {
+                if (isbn.charAt(i-1) == '?') {
                     irregular_character = i;
                 } else {
 
-                    if (i == 10 && isbm.charAt(i - 1) == 'X') {
+                    if (i == 10 && isbn.charAt(i - 1) == 'X') {
 
                         number = (10 * i);
 
                     }else {
                         try {
-                            character = Integer.parseInt(isbm.substring(i - 1, i));
+                            character = Integer.parseInt(isbn.substring(i - 1, i));
+                            number = (character * i);
                         }catch (NumberFormatException error){
                             System.out.println(error.getMessage());
-                            break;
+                            exit(1);
                         }
-                        number = (character * i);
 
                     }
                     operation = (operation + number);
@@ -60,15 +56,15 @@ public class Practica3_T2 {
             }else {
 
                 if ((operation % 11) == 0){
-                    System.out.println("El ISBM es válido");
+                    System.out.println("El ISBN es válido");
                 }else{
-                    System.out.println("El ISBM no es válido (No es multiplo de 11)");
+                    System.out.println("El ISBN no es válido (No es multiplo de 11)");
                 }
 
             }
 
         }else{
-            System.out.println("El ISBM no es válido (longitud erronea)");
+            System.out.println("El ISBN no es válido (longitud erronea)");
         }
     }
 }
