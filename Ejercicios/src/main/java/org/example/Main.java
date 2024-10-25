@@ -56,13 +56,20 @@ public class Main {
 //        t2loopex.T2LEx7();
 //        t2loopex.T2LEx8();
 
-        Practica3_T2 practica3T2 = new Practica3_T2();
-        practica3T2.isbn_check();
+//        Practica3_T2 practica3T2 = new Practica3_T2();
+//        practica3T2.isbn_check();
 
 //        T2Random_Exercices randomExercices = new T2Random_Exercices();
 //        randomExercices.T2REx1();
 //        randomExercices.T2REx2();
 //        randomExercices.T2REx3();
-//        randomExercices.T2REx4();
+
+        T2Pre_exam_Exercices t2examexercices = new T2Pre_exam_Exercices();
+        t2examexercices.T2pre_exam_ex1();
+        t2examexercices.T2pre_exam_ex2();
+        t2examexercices.T2pre_exam_ex3();
+        t2examexercices.T2pre_exam_ex4();
+        t2examexercices.T2pre_exam_ex5();
+        t2examexercices.T2pre_exam_ex6();
     }
 }
