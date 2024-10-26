@@ -86,7 +86,9 @@ public class T2Pre_exam_Exercices {
         }
     }
     public void T2pre_exam_ex4(){
+        int note = 0;
         System.out.println("Dame una nota númerica");
+        note = entry.nextInt();
     }
     public void T2pre_exam_ex5(){}
     public void T2pre_exam_ex6(){}
