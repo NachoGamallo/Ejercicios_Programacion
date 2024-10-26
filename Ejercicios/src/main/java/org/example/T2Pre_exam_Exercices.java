@@ -87,10 +87,120 @@ public class T2Pre_exam_Exercices {
     }
     public void T2pre_exam_ex4(){
         int note = 0;
-        System.out.println("Dame una nota númerica");
-        note = entry.nextInt();
+        boolean value = true;
+        try {
+            System.out.println("Dame una nota númerica (redondeada)");
+            note = entry.nextInt();
+        }catch (InputMismatchException error){
+            System.out.println(error.getMessage() + ". No valido");
+            value = false;
+        }
+        if (value){
+            switch (note){
+                case 0, 1 , 2, 3, 4:
+                    System.out.println("Insuficiente");
+                    break;
+                case 5:
+                    System.out.println("Suficiente");
+                    break;
+                case 6:
+                    System.out.println("Bien");
+                    break;
+                case 8 , 7:
+                    System.out.println("Notable");
+                    break;
+                case 9 , 10:
+                    System.out.println("Sobresaliente");
+                    break;
+                default:
+                    System.out.println("No valido");
+                    break;
+            }
+        }
+
     }
-    public void T2pre_exam_ex5(){}
-    public void T2pre_exam_ex6(){}
-    public void T2pre_exam_ex7(){}
+    public void T2pre_exam_ex5(){
+        int max_salary= 0, actual_salary= 0, num = 5, more_than1000 = 0;
+        boolean value = true;
+        for (int i=1;i<=num;i++){
+            try {
+                System.out.println("Introduce el salario " + i + " de la empresa NTT data");
+                actual_salary = entry.nextInt();
+            }catch (InputMismatchException error){
+                System.out.println(error.getMessage());
+                value = false;
+                break;
+            }
+            if (actual_salary > 1000){
+                more_than1000++;
+            }
+            if (max_salary < actual_salary){
+                max_salary = actual_salary;
+            }
+        }
+        if (value){
+            System.out.println("El salario mas alto es: " + max_salary);
+            System.out.println("De los salarios introducidos " + more_than1000 + " son superiores a 1000");
+        }
+
+    }
+    public void T2pre_exam_ex6(){
+        int n_alum = 0, actual_age = 0, actual_height = 0, total_age = 0, total_height = 0, more_than175 = 0, more_than18 = 0;
+        boolean value = true;
+        try {
+            System.out.println("De cuantos alumnos quieres preguntar la edad/altura");
+            n_alum = entry.nextInt();
+        }catch (InputMismatchException error){
+            System.out.println(error.getMessage());
+            value = false;
+        }
+        if (value){
+            for (int i = 1;i <= n_alum;i++){
+                try {
+                    System.out.println("Introduce la edad del alumno " + i);
+                    actual_age = entry.nextInt();
+                    System.out.println("Introduce la altura del alumno " + i);
+                    actual_height = entry.nextInt();
+                }catch (InputMismatchException error){
+                    System.out.println(error.getMessage());
+                    value = false;
+                    break;
+                }
+                total_age += actual_age;
+                total_height += actual_height;
+                if (actual_age > 18){
+                    more_than18++;
+                }
+                if (actual_height > 175){
+                    more_than175++;
+                }
+            }
+            if (value){
+                System.out.println("En esta clase, la media de edad es " + (total_age / n_alum) + " y la media de altura esta en " + (total_height / n_alum));
+                System.out.println("Y en la clase hay " + more_than18 + " mayores de edad, y " + more_than175 + " miden mas de 175cm");
+            }
+        }
+    }
+    public void T2pre_exam_ex7(){
+        int sequence_n = 0,sequence_value = 0,next_sequence=1;
+        boolean value = true;
+        try{
+            System.out.println();
+            System.out.println("Introduce el numero de secuencias que quieres ver");
+            sequence_n = entry.nextInt();
+            if (sequence_n <= 0){
+                value = false;
+            }
+        }catch (InputMismatchException error){
+            System.out.println(error.getMessage());
+            value = false;
+        }
+        if (value){
+            for (int i=1;i<=sequence_n;i++){
+                System.out.println(sequence_value);
+                next_sequence += sequence_value;
+                sequence_value = next_sequence - sequence_value;
+            }
+        }
+    }
 }
