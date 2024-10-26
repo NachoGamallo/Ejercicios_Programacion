@@ -76,8 +76,32 @@ public class T2Exercices {
     }
     public void T2ex5(){
         Scanner entry = new Scanner(System.in);
+        String player1_chain, player2_word, player1_words;
         System.out.println("Jugador 1, ingresa una cadena: ");
-        
+        player1_chain = entry.nextLine();
+        System.out.println("-------------------");
 
-    } //TO DO
+        for(int i=10;i>=1;i--){
+
+            System.out.println("Intento Numero " + i);
+            System.out.println("Jugador 2, ingresa una palabra: ");
+            player2_word = entry.nextLine();
+
+            for (int a=0;a<=player1_chain.length();a++){
+                player1_words = player1_chain.replace(" ","");
+                int length_chain = (player1_words.length());
+
+                if ((length_chain - a) >= player2_word.length()){
+
+                    player1_words = player1_words.substring(a,player2_word.length());
+                    if (player1_words.equalsIgnoreCase(player2_word)){
+
+                        System.out.println("Enhorabuena, has acertado una palabra");
+                        i = 1;
+                        break;
+                    }
+                }
+            }
+        }
+    }
 }
