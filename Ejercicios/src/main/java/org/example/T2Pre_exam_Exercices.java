@@ -120,7 +120,7 @@ public class T2Pre_exam_Exercices {
 
     }
     public void T2pre_exam_ex5(){
-        int max_salary= 0, actual_salary= 0, num = 5, more_than1000 = 0;
+        int max_salary= 0, actual_salary, num = 5, more_than1000 = 0;
         boolean value = true;
         for (int i=1;i<=num;i++){
             try {
@@ -184,23 +184,25 @@ public class T2Pre_exam_Exercices {
     public void T2pre_exam_ex7(){
         int sequence_n = 0,sequence_value = 0,next_sequence=1;
         boolean value = true;
-        try{
-            System.out.println();
-            System.out.println("Introduce el numero de secuencias que quieres ver");
-            sequence_n = entry.nextInt();
-            if (sequence_n <= 0){
+        do{
+            try{
+                System.out.println();
+                System.out.println("Introduce el numero de secuencias que quieres ver");
+                sequence_n = entry.nextInt();
+                if (sequence_n <= 0){
+                    value = false;
+                    System.out.println("Has introducido un número menor o igual a 0");
+                }
+            }catch (InputMismatchException error){
+                System.out.println("Has introducido un valor incorrecto: " + error.getMessage());
                 value = false;
             }
-        }catch (InputMismatchException error){
-            System.out.println(error.getMessage());
-            value = false;
-        }
-        if (value){
-            for (int i=1;i<=sequence_n;i++){
-                System.out.println(sequence_value);
-                next_sequence += sequence_value;
-                sequence_value = next_sequence - sequence_value;
-            }
+        }while (value);
+
+        for (int i=1;i<=sequence_n;i++){
+            System.out.println(sequence_value);
+            next_sequence += sequence_value;
+            sequence_value = next_sequence - sequence_value;
         }
     }
 }
