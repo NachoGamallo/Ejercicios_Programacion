@@ -64,13 +64,13 @@ public class Main {
 //        randomExercices.T2REx2();
 //        randomExercices.T2REx3();
 
-//        T2Pre_exam_Exercices t2examexercices = new T2Pre_exam_Exercices();
+        T2Pre_exam_Exercices t2examexercices = new T2Pre_exam_Exercices();
 //        t2examexercices.T2pre_exam_ex1();
 //        t2examexercices.T2pre_exam_ex2();
 //        t2examexercices.T2pre_exam_ex3();
 //        t2examexercices.T2pre_exam_ex4();
 //        t2examexercices.T2pre_exam_ex5();
 //        t2examexercices.T2pre_exam_ex6();
-//        t2examexercices.T2pre_exam_ex7();
+        t2examexercices.T2pre_exam_ex7();
     }
 }

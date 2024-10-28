@@ -197,10 +197,10 @@ public class T2Pre_exam_Exercices {
                 System.out.println("Has introducido un valor incorrecto: " + error.getMessage());
                 value = false;
             }
-        }while (value);
+        }while (!value);
 
         for (int i=1;i<=sequence_n;i++){
-            System.out.print(sequence_value);
+            System.out.print(sequence_value + "");
             next_sequence += sequence_value;
             sequence_value = next_sequence - sequence_value;
         }
