@@ -200,7 +200,7 @@ public class T2Pre_exam_Exercices {
         }while (value);
 
         for (int i=1;i<=sequence_n;i++){
-            System.out.println(sequence_value);
+            System.out.print(sequence_value);
             next_sequence += sequence_value;
             sequence_value = next_sequence - sequence_value;
         }
