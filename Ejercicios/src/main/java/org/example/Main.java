@@ -30,12 +30,12 @@ public class Main {
         /*Practica4 practica4 = new Practica4();
         practica4.practice_4();*/
 
-        //T2Exercices T2Exercices = new T2Exercices();
+//        T2Exercices T2Exercices = new T2Exercices();
         //T2Exercices.T2ex1();
         //T2Exercices.T2ex2();
         //T2Exercices.T2ex3();
         //T2Exercices.T2ex4();
-        //T2Exercices.T2ex5();
+//        T2Exercices.T2ex5();
 
 //        Practica1_T2 practica1T2 = new Practica1_T2();
 //        practica1T2.P1_T2();
