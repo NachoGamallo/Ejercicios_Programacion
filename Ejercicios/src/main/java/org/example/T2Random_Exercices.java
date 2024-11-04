@@ -13,7 +13,7 @@ public class T2Random_Exercices {
         System.out.println("El dado 1 a salido "+ num1 + " y el dado 2 a salido " + num2 + " , el resultado de la suma de ambos es: " + (num1+num2));
     }
     public void T2REx2(){
-        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        String characters = "ABCDE vFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         int tam = characters.length();
         int password_length = random.nextInt(6,9);
         int indice;
@@ -44,7 +44,7 @@ public class T2Random_Exercices {
         }
         if (value){
             for (int i = 1;i<=number;i++){
-                int generated_number = random.nextInt(min,max);
+                int generated_number = random.nextInt(min,max );
                 result += Integer.toString(generated_number);
             }
             System.out.println("Números generados: " + result);

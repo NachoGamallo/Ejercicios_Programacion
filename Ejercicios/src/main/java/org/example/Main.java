@@ -64,13 +64,25 @@ public class Main {
 //        randomExercices.T2REx2();
 //        randomExercices.T2REx3();
 
-        T2Pre_exam_Exercices t2examexercices = new T2Pre_exam_Exercices();
+//        T2Pre_exam_Exercices t2examexercices = new T2Pre_exam_Exercices();
 //        t2examexercices.T2pre_exam_ex1();
 //        t2examexercices.T2pre_exam_ex2();
 //        t2examexercices.T2pre_exam_ex3();
 //        t2examexercices.T2pre_exam_ex4();
 //        t2examexercices.T2pre_exam_ex5();
 //        t2examexercices.T2pre_exam_ex6();
-        t2examexercices.T2pre_exam_ex7();
+//        t2examexercices.T2pre_exam_ex7();
+
+    T3Array_Exercices arrayexercices = new T3Array_Exercices();
+    arrayexercices.Arrayex1();
+    arrayexercices.Arrayex2();
+    arrayexercices.Arrayex3();
+    arrayexercices.Arrayex4();
+    arrayexercices.Arrayex5();
+    arrayexercices.Arrayex6();
+    arrayexercices.Arrayex7();
+    arrayexercices.Arrayex8();
+    arrayexercices.Arrayex9();
+    arrayexercices.Arrayex10();
     }
 }
