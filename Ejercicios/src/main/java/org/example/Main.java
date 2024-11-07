@@ -77,9 +77,9 @@ public class Main {
 //    arrayexercices.Arrayex1();
 //    arrayexercices.Arrayex2();
 //    arrayexercices.Arrayex3();
-    arrayexercices.Arrayex4();
-    arrayexercices.Arrayex5();
-    arrayexercices.Arrayex6();
+//    arrayexercices.Arrayex4();
+//    arrayexercices.Arrayex5();
+//    arrayexercices.Arrayex6();
     arrayexercices.Arrayex7();
     arrayexercices.Arrayex8();
     arrayexercices.Arrayex9();
