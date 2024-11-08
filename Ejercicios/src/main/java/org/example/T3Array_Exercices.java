@@ -139,11 +139,69 @@ public class T3Array_Exercices {
         }
     }
     public void Arrayex7(){
-        int [] fvector = new int [3];
-        int [] svector = new int [3];
-        
+        int [] first_vector = {1,2,3};
+        int [] second_vector = {4,5,6};
+        int [] total_vector =new int [first_vector.length + second_vector.length];
+        System.arraycopy(first_vector,0,total_vector,0,3);
+        System.arraycopy(second_vector,0,total_vector,3,3);
+        System.out.println("Array 1: " + Arrays.toString(first_vector));
+        System.out.println("Array 1: " + Arrays.toString(second_vector));
+        System.out.println("Array combinado: " + Arrays.toString(total_vector));
     }
-    public void Arrayex8(){}
-    public void Arrayex9(){}
-    public void Arrayex10(){}
+    public void Arrayex8(){
+        int user_number = 0,user_position = 0;
+        int [] original_vector =  {1,2,3,5};
+        int [] result_vector = new int [original_vector.length + 1];
+        boolean status;
+        System.out.println("Array original: " + Arrays.toString(original_vector));
+        do {
+            try {
+                System.out.println("Iserta el número que quieres añadir: ");
+                user_number = entry.nextInt();
+                System.out.println("Inserta la posición en la que lo quieres poner (máximo 3): ");
+                user_position = entry.nextInt();
+                if (user_position < 0 || user_position > original_vector.length){
+                    System.out.println("ERROR, Has ingresado una posición incorrecta.");
+                    status = false;
+                    entry.next();
+                }else {
+                    status = true;
+                }
+            }catch (InputMismatchException error){
+                System.out.println("ERROR, Has ingresado un formato incorrecto.");
+                status = false;
+                entry.next();
+            }
+        }while (!status);
+        System.out.println("Inserta el número " + user_number + " en la posición " + user_position);
+        System.arraycopy(original_vector,0,result_vector,0,user_position);
+        result_vector [user_position] = user_number;
+        System.arraycopy(original_vector,user_position,result_vector,user_position + 1 ,original_vector.length - user_position);
+        System.out.println("Array resultante: " + Arrays.toString(result_vector));
+
+    }
+    public void Arrayex9(){
+        String longger_vector = "",temp = "";
+        String [] vector = {"hola","que","tal","estas","raul"};
+        for (int i=0;i<vector.length;i++){
+            temp = vector[i];
+            if (temp.length() > longger_vector.length()){
+                longger_vector = vector[i];
+            }
+        }
+        System.out.println("La palabra mas larga es: " + longger_vector);
+    }
+    public void Arrayex10(){
+        String [] vector = {"Pero","Madre","mia","WILLY","COMPAÑERO","!!!"};
+        String user_char,actual_vector;
+        System.out.println("Introduce una letra (char): ");
+        user_char = entry.next();
+        user_char = String.valueOf(user_char.charAt(0));
+        for (int i = 0;i<vector.length;i++){
+            actual_vector = vector[i];
+            if (actual_vector.substring(0,1).equalsIgnoreCase(user_char)){
+                System.out.print(actual_vector + ", ");
+            }
+        }
+    }
 }

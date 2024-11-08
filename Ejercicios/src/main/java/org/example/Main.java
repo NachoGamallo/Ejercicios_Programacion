@@ -80,9 +80,9 @@ public class Main {
 //    arrayexercices.Arrayex4();
 //    arrayexercices.Arrayex5();
 //    arrayexercices.Arrayex6();
-    arrayexercices.Arrayex7();
-    arrayexercices.Arrayex8();
-    arrayexercices.Arrayex9();
-    arrayexercices.Arrayex10();
+//    arrayexercices.Arrayex7();
+//    arrayexercices.Arrayex8();
+//    arrayexercices.Arrayex9();
+//    arrayexercices.Arrayex10();
     }
 }
