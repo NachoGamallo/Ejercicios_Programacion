@@ -73,16 +73,19 @@ public class Main {
 //        t2examexercices.T2pre_exam_ex6();
 //        t2examexercices.T2pre_exam_ex7();
 
-    T3Array_Exercices arrayexercices = new T3Array_Exercices();
-//    arrayexercices.Arrayex1();
-//    arrayexercices.Arrayex2();
-//    arrayexercices.Arrayex3();
-//    arrayexercices.Arrayex4();
-//    arrayexercices.Arrayex5();
-//    arrayexercices.Arrayex6();
-//    arrayexercices.Arrayex7();
-//    arrayexercices.Arrayex8();
-//    arrayexercices.Arrayex9();
-//    arrayexercices.Arrayex10();
+    //    T3Array_Exercices arrayexercices = new T3Array_Exercices();
+    //    arrayexercices.Arrayex1();
+    //    arrayexercices.Arrayex2();
+    //    arrayexercices.Arrayex3();
+    //    arrayexercices.Arrayex4();
+    //    arrayexercices.Arrayex5();
+    //    arrayexercices.Arrayex6();
+    //    arrayexercices.Arrayex7();
+    //    arrayexercices.Arrayex8();
+    //    arrayexercices.Arrayex9();
+    //    arrayexercices.Arrayex10();
+
+        Practica1_T3 practica1T3 = new Practica1_T3();
+        practica1T3.practica1T3();
     }
 }
