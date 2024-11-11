@@ -85,7 +85,10 @@ public class Main {
     //    arrayexercices.Arrayex9();
     //    arrayexercices.Arrayex10();
 
-        Practica1_T3 practica1T3 = new Practica1_T3();
-        practica1T3.practica1T3();
+/*        Practica1_T3 practica1T3 = new Practica1_T3();
+        practica1T3.practica1T3();*/
+
+
+
     }
 }
