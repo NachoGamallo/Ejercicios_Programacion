@@ -73,8 +73,8 @@ public class Main {
 //        t2examexercices.T2pre_exam_ex6();
 //        t2examexercices.T2pre_exam_ex7();
 
-    //    T3Array_Exercices arrayexercices = new T3Array_Exercices();
-    //    arrayexercices.Arrayex1();
+//        T3Array_Exercices arrayexercices = new T3Array_Exercices();
+//        arrayexercices.Arrayex1();
     //    arrayexercices.Arrayex2();
     //    arrayexercices.Arrayex3();
     //    arrayexercices.Arrayex4();
