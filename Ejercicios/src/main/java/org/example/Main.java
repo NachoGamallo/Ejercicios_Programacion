@@ -88,7 +88,15 @@ public class Main {
 /*        Practica1_T3 practica1T3 = new Practica1_T3();
         practica1T3.practica1T3();*/
 
+//        LaRule ruleta = new LaRule();
+//        ruleta.activadad_ruleta();
 
+        //Eliminar_Duplicados deletevalues = new Eliminar_Duplicados();
+        //deletevalues.form1();
+        //deletevalues.form2();
+        //deletevalues.form3();
 
+        Practica2_T3 primitiva = new Practica2_T3();
+        primitiva.laprimitivaP2T3();
     }
 }
