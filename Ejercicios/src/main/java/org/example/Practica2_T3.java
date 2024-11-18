@@ -13,13 +13,13 @@ public class Practica2_T3 {
        String[] user_chain; //Aquí definimos los 2 vectores y definimos variables.
        int [] random_chain = new int[7];
        int [] user_convert_toInt = new int[7];
+       int [] temp_array = new int[6];
        String user_input;
        int complementary;
        boolean status;
 
         do {
 
-            status = true;
             System.out.println("Introduce la cadena ");
             user_input = entry.next();//Aqui el usuario ingresa los numeros que quiere con formato
             //x-x-x-x-x-x/x
@@ -43,8 +43,11 @@ public class Practica2_T3 {
                 System.out.println("Has introducido un formato no permitido...");
                 status = false;
             }
+
         }while (!status);
+
         do {
+
             status = true;
             for (int i=0;i<random_chain.length;i++){
                 if (i!=random_chain.length -1){
@@ -60,11 +63,56 @@ public class Practica2_T3 {
             }
             complementary = random.nextInt(49)+1;
             for (int i = 0;i<random_chain.length -2;i++){
+                temp_array[i] = random_chain[i];
                 if (random_chain[i] == complementary) {status = false;break;}
             }
+
         }while (!status);
-        System.out.println(Arrays.toString(random_chain));
+
         System.out.println(Arrays.toString(user_convert_toInt));
-        System.out.println(complementary);
+        System.out.println("SORTEO: ");
+        System.out.println(Arrays.toString(temp_array));
+        System.out.println("Complementario: " + complementary);
+        System.out.println("Reintegro: " + random_chain[random_chain.length-1]);
+        
+        int points = 0, reintegro = 0, special_point=0;
+        for (int i = 0; i<user_convert_toInt.length; i++){
+            if (i == user_convert_toInt.length-1 && user_convert_toInt[i] == random_chain[i]){
+                reintegro++;
+                continue;
+            }
+            if (user_convert_toInt[i]==random_chain[i]){
+                points++;
+            } else if (user_convert_toInt[i] == complementary) {
+                special_point++;
+            }
+        }
+        System.out.println(" ");
+        System.out.println("Resultados: ");
+        if (points == 6 && special_point == 1){
+            System.out.println("Categoría Especial");
+        } else if (points == 6 && special_point == 0) {
+            System.out.println("1ª Categoría");
+        } else if (points == 5 && special_point == 1) {
+            System.out.println("2ª Categoría");
+        } else if (points == 4 && special_point == 1) {
+            System.out.println("3ª Categoría");
+        } else if (points == 3 && special_point == 1) {
+            System.out.println("4ª Categoría");
+        } else if (points == 2 && special_point == 1) {
+            System.out.println("5ª Categoría");
+        } else if (points == 1 && special_point == 1){
+            System.out.println("2 Aciertos");
+        }else {
+            System.out.println("1 Aciertos");
+        }
+
+        if (reintegro == 1){
+            System.out.println("Reintegro");
+        }
+
+        if (reintegro == 0 && (points + special_point) == 0) {
+            System.out.println("No premiado");
+        }
     }
 }
