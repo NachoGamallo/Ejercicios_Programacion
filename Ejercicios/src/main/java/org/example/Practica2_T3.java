@@ -32,20 +32,22 @@ public class Practica2_T3 {
                 try {
                     for (int i = 0;i<user_chain.length;i++){
                         user_convert_toInt[i] = Integer.parseInt(user_chain[i]);//Aqui convertira de texto a numero.
-                        if (user_convert_toInt[i] < 0 || user_convert_toInt[i] > 49){status=false;}//Si el numero es menor a 0 o mayor a 49, status false.
+                        if (user_convert_toInt[i] < 0 || user_convert_toInt[i] > 49){
+                            status=false;
+                        }//Si el numero es menor a 0 o mayor a 49, status false.
                     }
-                }catch (InputMismatchException error){//Si falla al intentar convertir a numero saltara el catch y dara status false y un mensaje al usuario.
+                }catch (InputMismatchException error){//Si falla al intentar convertir a numero saltara el catch y dara status false.
                     status = false;
-                    System.out.println("Has introducido un formato no permitido...");
                 }
 
-            }else {System.out.println("Has introducido un formato no permitido...");}//Si no entro al bucle, introducira este mensaje al usuario.
+            }
             int[] temp = Arrays.stream(user_convert_toInt).distinct().toArray();//Convierte el array int en un array int sin duplicados.
             if (status && temp.length != user_convert_toInt.length){//Si no tienen la misma longitud es que hay duplicados, y pasa a status false.
-                System.out.println("Has introducido un formato no permitido...");
                 status = false;
             }
-
+            if (!status){//Si status false, imprimir mensaje de error
+                System.out.println("Has introducido un formato no permitido...");
+            }
         }while (!status);//Mientras el status sea false, nunca saldra del bucle while.
 
         do {
