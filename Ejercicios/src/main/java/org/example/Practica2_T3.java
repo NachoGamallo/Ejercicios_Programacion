@@ -67,7 +67,7 @@ public class Practica2_T3 {
             }
             complementary = random.nextInt(49)+1;//Declaramos el complementario, que tampoco puede ser como ninguno de los numeros de la posicion 0
             //a la posicion 5 (6 primeros numeros).
-            for (int i = 0;i<random_chain.length -2;i++){//recorremos el array random.
+            for (int i = 0;i<random_chain.length -1;i++){//recorremos el array random.
                 temp_array[i] = random_chain[i];//declaramos un array temporal que tendra los 6 primeros numeros para usarlos mas adelante.
                 if (random_chain[i] == complementary) {status = false;break;}//si el complementario coincide con alguno de los numeros originales del array,
                 //saltara el status false, y parara el bucle
@@ -82,15 +82,19 @@ public class Practica2_T3 {
         System.out.println("Reintegro: " + random_chain[random_chain.length-1]);//Imprimimos el reintegro.
         
         int points = 0, reintegro = 0, special_point=0;//declaramos las variables que usaremos para marcar los puntos que ha conseguido el usuario.
-        for (int i = 0; i<user_convert_toInt.length; i++){
-            if (i == user_convert_toInt.length-1 && user_convert_toInt[i] == random_chain[i]){//Si el bucle esta en la ultima posicion (reintegro) y coinciden,
-                //el usuario tiene el punto del reintegro y se saltara la siguiente comprobacion.
+        for (int i = 0; i<user_convert_toInt.length; i++){//Recorremos el array del usuario uno a uno.
+            if (i == user_convert_toInt.length-1 && user_convert_toInt[i] == random_chain[i]){//Si estamos en la ultima posicion (reintegro),
+                //y coinciden los reintegros se indica que el reintegro coincide, y se salta el demas codigo del bucle
                 reintegro++;
                 continue;
             }
-            if (user_convert_toInt[i]==random_chain[i]){//Si el array del usuario coincide con el array generado, tiene 1 punto de los numeros originales.
-                points++;
-            } else if (user_convert_toInt[i] == complementary) {//Si la posicion actual coincide con el numero complementario, tiene el punto de este.
+            for (int j = 0;j<user_convert_toInt.length - 1;j++) {//Comprobamos si la posicion actual del vector del usuario,
+                // coincide con alguna posicion del array aleatorio.
+                if (user_convert_toInt[i] == j) {
+                    points++;//Si coincide + 1 punto.
+                }
+            }
+            if (user_convert_toInt[i] == complementary) {//Si el numero actual del usuario es igual al complementario + 1 punto de complementario.
                 special_point++;
             }
         }
