@@ -98,5 +98,10 @@ public class Main {
 
         Practica2_T3 primitiva = new Practica2_T3();
         primitiva.laprimitivaP2T3();
+
+        Ejercicios_Matrices1 exmatriz1 = new Ejercicios_Matrices1();
+        exmatriz1.ex1();
+        exmatriz1.ex2();
+        exmatriz1.ex3();
     }
 }
