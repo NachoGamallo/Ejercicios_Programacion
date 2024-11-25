@@ -96,12 +96,15 @@ public class Main {
         //deletevalues.form2();
         //deletevalues.form3();
 
-        Practica2_T3 primitiva = new Practica2_T3();
-        primitiva.laprimitivaP2T3();
+//        Practica2_T3 primitiva = new Practica2_T3();
+//        primitiva.laprimitivaP2T3();
 
-        Ejercicios_Matrices1 exmatriz1 = new Ejercicios_Matrices1();
-        exmatriz1.ex1();
-        exmatriz1.ex2();
-        exmatriz1.ex3();
+//        Ejercicios_Matrices1 exmatriz1 = new Ejercicios_Matrices1();
+//        exmatriz1.ex1();
+//        exmatriz1.ex2();
+//        exmatriz1.ex3();
+
+        Sopa_De_Letras sopaDeLetras = new Sopa_De_Letras();
+        sopaDeLetras.P3T3();
     }
 }
