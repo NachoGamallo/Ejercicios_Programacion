@@ -99,10 +99,16 @@ public class Main {
 //        Practica2_T3 primitiva = new Practica2_T3();
 //        primitiva.laprimitivaP2T3();
 
-//        Ejercicios_Matrices1 exmatriz1 = new Ejercicios_Matrices1();
-//        exmatriz1.ex1();
-//        exmatriz1.ex2();
-//        exmatriz1.ex3();
+        /*Pre_Matrices preMatrices = new Pre_Matrices();
+        preMatrices.ex1_PMatrices();
+        preMatrices.ex2_PMatrices();
+        preMatrices.ex3_PMatrices();
+        preMatrices.ex4_PMatrices();
+
+        Ejercicios_Matrices1 exmatriz1 = new Ejercicios_Matrices1();
+        exmatriz1.ex1();
+        exmatriz1.ex2();
+        exmatriz1.ex3();*/
 
         Sopa_De_Letras sopaDeLetras = new Sopa_De_Letras();
         sopaDeLetras.P3T3();
