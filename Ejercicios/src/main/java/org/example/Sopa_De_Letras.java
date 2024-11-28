@@ -93,59 +93,62 @@ public class Sopa_De_Letras {
             // saca de la clase
         }
 
-        search_word://Definimos con un nombre, este for. Que recorre junto al siguiente
-        // la matriz entera. Caracter por caracter.
-        for (int i = 0;i<letter_soup.length;i++){
+        int cont = 0;
+        search_word:
+        for (int i = 0;i<letter_soup.length;i++){//Definimos con un nombre, este for. Que recorre junto al siguiente
+            // la matriz entera. Caracter por caracter.
 
-            for (int j = 0;j<letter_soup[0].length;j++){//Recorre cada línea de la matriz.
+            for (int j = 0;j<letter_soup[0].length;j++){
 
-                //Aqui comprobamos si el caracter actual, que estamos recorriendo de la linea es
-                // igual a la primera posicion del vector que contiene la palabra que el usuario
-                // queria buscar. Si no se cumple sigue recorriendo el for anterior sigue recorriendo
-                // caracter por caracter.
-                if (letter_soup[i][j].equalsIgnoreCase(word_vector[0])){
-                    status = false;//Declaramos el status en false, porque ahora vamos a comprobar
-                    // la linea y la columna a partir de la posicion en la que se ha encontrado la letra.
-                    for (int row_search = 0;row_search<letter_soup[0].length - j;row_search++){
+                if (letter_soup[i][j].equalsIgnoreCase(word_vector[0])){//Aqui comprobamos si el caracter actual, que estamos recorriendo de la linea es
+                    // igual a la primera posicion del vector que contiene la palabra que el usuario
+                    // queria buscar. Si no se cumple sigue recorriendo el for anterior caracter por caracter.
+                    cont = 0;
+                    //Declaramos la variable count en 0, porque es el indice que tendremos para comprobar la posicion de la palabra ingresada por el usuario.
+                    for (int row_search = j;row_search<letter_soup[i].length;row_search++){
                         //Hacemos un nuevo for, que va a reccorer la linea a partir de la posicion
                         // en la que lo ha encontrado, es decir si se encuentra en la posicion 1 y
                         // el vector tiene una longitud de 4. Vamos a recorrer a la cantidad exacta
                         // de caracteres que nos faltan por recorrer.
-
-                        if (!letter_soup[i][row_search].equalsIgnoreCase(word_vector[row_search])){
-                            //Aqui se comprueba que el siguiente caracter sea igual que el de la cadena del usuario,
-                            //si no es igual. No queremos seguir buscando porque no es la misma palabra.
-                            status = false;
-                            break;
+                        if (cont != word_vector.length && letter_soup[i][row_search].equalsIgnoreCase(word_vector[cont])){
+                            cont++;//Si las dos condiciones se cumplen, es que el caracter es el mismo. Y sumamos 1 a cont para comprobar el siguiente en la siguiente iteracion
+                            // del bucle
                         }else {
-                            status = true;
-                        }//Si es el mismo ponemos status true, porque ha encontrado la misma. Este true, es para
-                        //verificar que cada caracter es el correcto hasta el final.
+                            break;
+                        }//Aqui se comprueba que el caracter actual sea igual que el de la cadena del usuario,
+                        //si no es igual. No queremos seguir buscando porque no es la misma palabra.
                     }
-                    if (!status){//Si en la linea no hemos encontrado la palabra, pues habra que comprobar la columna.
-                        //Asi que este for hace eso mismo, comprueba la columna igual que la linea anterior. Con la
-                        // cantidad exacta de caracteres que faltan por recorrer.
-                        for (int column_search = 0;column_search<letter_soup.length - i;column_search++){
-                            if (!letter_soup[column_search][j].equalsIgnoreCase(word_vector[column_search])){
-                                status = false;
-                                break;//Comprobamos que sea el mismo caracter, sino saldra del bucle porque
-                                //no necesitamos seguir buscando
+
+                    if (cont != word_vector.length){//Si la longitud no es la misma, es que no es la palabra.
+                        cont = 0;//Si en la linea no hemos encontrado la palabra, pues habra que comprobar la columna.
+                        //Asi que este for hace eso mismo, comprueba la columna igual que la linea anterior (pero estamos apuntando a la columna). Con la
+                        // cantidad exacta de caracteres que faltan por recorrer. Y definimos de nuevo cont, para que empiece de nuevo desde la primera posicion a comprobar
+
+                        for (int column_search = j;column_search<letter_soup.length;column_search++){
+
+                            if (cont != word_vector.length && letter_soup[column_search][j].equalsIgnoreCase(word_vector[cont])){
+                                //Comprobamos que sea el mismo caracter, sino saldra del bucle porque
+                                //no necesitamos seguir buscando, el funcionamiento es igual, solo apuntamos de diferente forma a la matriz
+                                cont++;
                             }else {
-                                status = true;
-                            }//Si es true hasta el final, hemos encontrado la palabra.
+                                break;
+                            }
                         }
+                        if (cont == word_vector.length){//Si encuentra la palabra, en la columna. Imprime el mensaje y acaba el programa.
+
+                            System.out.println("ENCONTRADA!! En la Fila: " + i + " , Columna: " + j);
+                            break search_word;
+                        }
+
+                    }else {//Si en la fila ya has encontrado la palabra, el bucle de columnas se lo salta, da el resultado y acaba el programa.
+
+                        System.out.println("ENCONTRADA!! En la Fila: " + i + " , Columna: " + j);
+                        break search_word;
                     }
-                }
-                if (status){//Y aquí esta el motivo del status en esto, si ha encontrado la palabra,
-                    // ya sea en la línea o en la columna. Nos indicara la posicion de la
-                    // primera letra y acabara el juego. Si no la ha encontrado, no pasa nada. Seguira
-                    // recorriendo la matriz hasta que encuentre la palabra, si esta claro.
-                    System.out.println("ENCONTRADA!! En la posicion: " + j + " , " + i);
-                    break search_word;//Cuando la encuntra acaba el programa.
                 }
             }
         }
-        if (!status){//Si se ha reccorido toda la matriz, y no se encontro nada. Has perdido.
+        if (cont != word_vector.length){//Si despues de recorrer toda la matriz, no ha encontrado la palabra. Imprime mensaje de que has perdido.
             System.out.println("Lo siento... no has encontrado la palabra :(");
         }
     }
