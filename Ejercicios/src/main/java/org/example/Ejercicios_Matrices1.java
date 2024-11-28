@@ -67,5 +67,7 @@ public class Ejercicios_Matrices1 {
             System.out.println("Columna " + i + " : " + colum_sum);
         }
     }
-    public void ex3(){}
+    public void ex3(){
+
+    }
 }
