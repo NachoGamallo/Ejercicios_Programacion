@@ -1,4 +1,7 @@
 package org.example;
+
+import T4_Bateria1Ejercicios.T4B1_Ex1;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -112,5 +115,9 @@ public class Main {
 
 //        Sopa_De_Letras sopaDeLetras = new Sopa_De_Letras();
 //        sopaDeLetras.P3T3();
+
+        //Modular.heads_or_tails();
+
+        T4B1_Ex1.Ex1_main();
     }
 }
