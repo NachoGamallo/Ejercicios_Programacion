@@ -1,13 +1,10 @@
 package org.example;
-
 import T4_Bateria1Ejercicios.T4B1_Ex1;
+import T4_Bateria1Ejercicios.T4B1_Ex2;
+import T4_Bateria1Ejercicios.T4B1_Ex3;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
 
         /*Actividad_inicial actividad_inicial = new Actividad_inicial();
         actividad_inicial.Actividad();"*/
@@ -118,6 +115,8 @@ public class Main {
 
         //Modular.heads_or_tails();
 
-        T4B1_Ex1.Ex1_main();
+        //T4B1_Ex1.Ex1_main();
+        //T4B1_Ex2.Ex2_main();
+        T4B1_Ex3.Ex3_main();
     }
 }
