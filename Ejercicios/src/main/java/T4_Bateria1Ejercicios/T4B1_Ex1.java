@@ -6,7 +6,7 @@ public class T4B1_Ex1 {
     public static Scanner entry = new Scanner(System.in);
 
     public static int user_num(){
-        System.out.println("Introduce el número que quieres que sea elevado al cubo");
+        System.out.println("Introduce un número positivo: ");
         int num = 0;
         try {
             num = entry.nextInt();
